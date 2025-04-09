@@ -1,0 +1,429 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+    color: black;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden; /* Oculta el desbordamiento horizontal */
+    width: 100vw;
+}
+
+main {
+    flex: 1;
+}
+
+/* ----- HEADER ----- */
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.navbar-brand img {
+    display: block;
+    margin: 0 auto 10px; /* Centra la imagen y añade un margen inferior */
+    max-width: 200px; /* Ajusta el tamaño del logo */
+}
+
+.navbar-nav {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    gap: 20px;
+}
+
+.navbar-nav .nav-item {
+    text-align: center;
+}
+
+.navbar-nav .nav-link {
+    font-weight: bold;
+    color: rgba(208, 130, 13, 0.784);
+    padding: 10px;
+    transition: all 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    color: orange;
+    transform: scale(1.1);
+}
+
+/* ----- MENÚ DESPLEGABLE ----- */
+.dropdown-menu {
+    transition: opacity 0.3s ease-in-out, transform 0.2s ease-in-out;
+    opacity: 0;
+    transform: translateY(10px);
+    display: block;
+    visibility: hidden;
+}
+
+.dropdown:hover .dropdown-menu {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+}
+
+/* Estilos generales para el menú */
+.navbar-nav .dropdown-menu {
+    border: none;
+    background: white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-menu .dropdown-item {
+    font-weight: bold;
+    color: rgba(208, 130, 13, 0.784);
+    text-transform: uppercase;
+}
+
+.dropdown-menu .dropdown-item:hover {
+    background: orange;
+    color: white;
+}
+
+/* Estilos para los submenús */
+.dropdown-submenu {
+    position: relative;
+}
+
+.dropdown-submenu .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    margin-top: -1px;
+}
+
+.dropdown-submenu:hover > .dropdown-menu {
+    display: block;
+}
+
+/* Ajustes para hacer que los submenús sean en varias columnas */
+.dropdown-menu {
+    min-width: 200px;
+}
+
+.dropdown-menu .dropdown-item {
+    padding: 10px 15px;
+}
+
+/* Sección Quiénes Somos */
+.quienes-somos {
+    background-color: #f8f9fa; /* Fondo claro para contraste */
+    padding: 60px 20px; /* Espaciado cómodo */
+    border-radius: 10px; /* Bordes redondeados para suavidad */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra elegante */
+}
+
+/* Encabezado */
+.quienes-somos h2 {
+    font-size: 32px;
+    font-weight: bold;
+    color: #D0820D; /* Naranja corporativo */
+    margin-bottom: 20px;
+}
+
+/* Párrafos */
+.quienes-somos p {
+    font-size: 18px;
+    color: #333; /* Legibilidad */
+    line-height: 1.6;
+    text-align: justify;
+}
+
+/* Lista */
+.quienes-somos ul {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 10px;
+}
+
+.quienes-somos ul li {
+    font-size: 18px;
+    color: #444;
+    padding-left: 25px;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+/* Icono antes de cada punto de la lista */
+.quienes-somos ul li::before {
+    content: "✔"; /* Check */
+    color: #D0820D; /* Naranja corporativo */
+    font-size: 18px;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+/* Botón Contacto */
+.btn-curso {
+    display: inline-block;
+    background: #D0820D;
+    color: white;
+    padding: 12px 25px;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease-in-out;
+    margin-top: 20px;
+}
+
+.btn-curso:hover {
+    background: #804e0d;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .quienes-somos {
+        padding: 40px 15px;
+    }
+
+    .quienes-somos h2 {
+        font-size: 28px;
+    }
+
+    .quienes-somos p, .quienes-somos ul li {
+        font-size: 16px;
+    }
+}
+.preparacion-examenes {
+    background-color: #f8f9fa;
+    padding: 50px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo de títulos */
+.preparacion-examenes h2, .preparacion-examenes h3 {
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Lista de niveles */
+.preparacion-examenes .list-group-item {
+    font-size: 18px;
+}
+
+/* Tablas */
+.table th, .table td {
+    vertical-align: middle;
+}
+
+.table thead {
+    background-color: #333;
+    color: white;
+}
+
+/* Imágenes */
+.preparacion-examenes img {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .preparacion-examenes .row {
+        flex-direction: column;
+    }
+
+    .preparacion-examenes img {
+        margin-bottom: 20px;
+    }
+}
+/* Ajustes de la tabla */
+.oferta-formativa {
+    max-width: 80%; /* Reduce el ancho */
+    margin: auto; /* Centra la tabla */
+}
+
+/* Ajustes de la imagen */
+.oferta-formativa img {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .oferta-formativa {
+        max-width: 100%; /* En móviles ocupa todo el ancho */
+    }
+
+    .oferta-formativa img {
+        margin-top: 20px;
+    }
+}
+
+/* Lista de Idiomas */
+.idiomas-list {
+    margin-top: 15px;
+}
+
+.idiomas-list .list-group-item {
+    font-size: 16px;
+    text-align: center;
+    transition: background 0.3s ease-in-out;
+}
+
+.idiomas-list .list-group-item a {
+    text-decoration: none;
+    color: #D0820D;
+    font-weight: bold;
+}
+
+.idiomas-list .list-group-item:hover {
+    background-color: #f8f9fa;
+}
+
+
+/* Botón Contáctanos */
+.btn-curso {
+    display: inline-block;
+    background: #FF7F00; /* Color corporativo */
+    color: white;
+    padding: 12px 24px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background 0.3s ease-in-out;
+    margin-top: 20px; /* Espacio adicional con el contenido superior */
+    margin-bottom: 60px; /* Separa del footer */
+}
+
+.btn-curso:hover {
+    background: #E66900;
+}
+.footer-icons h3 {
+    font-size: 18px;
+    color: #FF7F00; /* Naranja */
+    margin-bottom: 5px;
+}
+
+/* Footer */
+footer {
+    background-color: #222;
+    color: white;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: auto;
+}
+
+.footer-logo {
+    height: 50px;
+}
+
+.footer-info h3 {
+    font-size: 18px;
+    color: #FF7F00;
+    margin-bottom: 5px;
+}
+
+.footer-info p {
+    font-size: 14px;
+    color: #ccc;
+    margin: 3px 0;
+}
+
+.footer-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.footer-icons svg {
+    width: 24px;
+    height: 24px;
+    fill: #FF7F00;
+    transition: transform 0.3s ease, fill 0.3s ease;
+    cursor: pointer;
+}
+
+.footer-icons svg:hover {
+    fill: #FFA500;
+    transform: scale(1.2);
+}
+
+.footer-links a {
+    color: #ccc;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 14px;
+}
+
+.footer-links a:hover {
+    color: #FF7F00;
+}
+
+@media (max-width: 900px) {
+    footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .footer-info {
+        align-items: center;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+}
+#spinner-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    visibility: hidden; /* Oculto por defecto */
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Estilo del spinner */
+.spinner-grow text-danger {
+    width: 50px;
+    height: 50px;
+    border: 5px solid rgba(255, 255, 255, 0.3);
+    border-top: 5px solid #FF7F00; /* Color del spinner */
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+/* Animación del spinner */
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* Mostrar el spinner */
+#spinner-overlay.active {
+    visibility: visible;
+    opacity: 1;
+}

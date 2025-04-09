@@ -1,0 +1,320 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+    color: black;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden; /* Oculta el desbordamiento horizontal */
+    width: 100vw;
+}
+
+main {
+    flex: 1;
+}
+
+/* ----- HEADER ----- */
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.navbar-brand img {
+    display: block;
+    margin: 0 auto 10px; /* Centra la imagen y añade un margen inferior */
+    max-width: 200px; /* Ajusta el tamaño del logo */
+}
+
+.navbar-nav {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    gap: 20px;
+}
+
+.navbar-nav .nav-item {
+    text-align: center;
+}
+
+.navbar-nav .nav-link {
+    font-weight: bold;
+    color: rgba(208, 130, 13, 0.784);
+    padding: 10px;
+    transition: all 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    color: orange;
+    transform: scale(1.1);
+}
+
+/* ----- MENÚ DESPLEGABLE ----- */
+.dropdown-menu {
+    transition: opacity 0.3s ease-in-out, transform 0.2s ease-in-out;
+    opacity: 0;
+    transform: translateY(10px);
+    display: block;
+    visibility: hidden;
+}
+
+.dropdown:hover .dropdown-menu {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+}
+
+/* Estilos generales para el menú */
+.navbar-nav .dropdown-menu {
+    border: none;
+    background: white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-menu .dropdown-item {
+    font-weight: bold;
+    color: rgba(208, 130, 13, 0.784);
+    text-transform: uppercase;
+}
+
+.dropdown-menu .dropdown-item:hover {
+    background: orange;
+    color: white;
+}
+
+/* Estilos para los submenús */
+.dropdown-submenu {
+    position: relative;
+}
+
+.dropdown-submenu .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    margin-top: -1px;
+}
+
+.dropdown-submenu:hover > .dropdown-menu {
+    display: block;
+}
+
+/* Ajustes para hacer que los submenús sean en varias columnas */
+.dropdown-menu {
+    min-width: 200px;
+}
+
+.dropdown-menu .dropdown-item {
+    padding: 10px 15px;
+}
+
+/* Imagen Certificadora */
+.certificadora-img {
+    border-radius: 15px; /* Redondea las esquinas de la imagen */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Agrega una sombra ligera */
+    max-width: 100%;
+    height: auto;
+}
+.banner {
+    width: 100vw; /* Ocupa todo el ancho de la pantalla */
+    
+    height: 300px; /* Altura predeterminada en pantallas grandes */
+    overflow: hidden; /* Evita desbordamientos */
+    position: relative; /* Permite agregar detalles encima */
+    margin-top: 20px; /* Espacio con el contenido superior */
+    border-top: 5px solid #D0820D; /* Borde superior naranja */
+    border-bottom: 5px solid #D0820D; /* Borde inferior naranja */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra elegante */
+}
+
+.banner img {
+    width: 100%; /* Imagen ocupa todo el ancho */
+    height: 100%; /* Imagen cubre la altura del contenedor */
+    object-fit: cover; /* Ajusta la imagen sin deformarla */
+    filter: brightness(0.95); /* Ajusta el brillo para mejorar integración */
+}
+
+/* Opcional: Overlay degradado */
+.banner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 60%, rgba(208, 130, 13, 0.2)); /* Degradado sutil */
+}
+
+/* 📱 Responsividad */
+@media (max-width: 1024px) {
+    .banner {
+        height: 250px; /* Reduce la altura en tablets */
+    }
+}
+
+@media (max-width: 768px) {
+    .banner {
+        height: 200px; /* Ajusta la altura en móviles */
+    }
+}
+
+@media (max-width: 480px) {
+    .banner {
+        height: auto; /* Permite que la imagen ajuste su altura */
+        border-top: 3px solid #D0820D; /* Bordes más finos */
+        border-bottom: 3px solid #D0820D;
+    }
+
+    .banner img {
+        height: auto; /* Evita que la imagen se recorte */
+        object-fit: contain; /* Asegura que la imagen completa se vea sin cortes */
+        object-position: center; /* Centra la imagen */
+    }
+}
+
+/* Botón Contáctanos */
+.btn-curso {
+    display: inline-block;
+    background: #FF7F00; /* Color corporativo */
+    color: white;
+    padding: 12px 24px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background 0.3s ease-in-out;
+    margin-top: 20px; /* Espacio adicional con el contenido superior */
+    margin-bottom: 60px; /* Separa del footer */
+}
+
+.btn-curso:hover {
+    background: #E66900;
+}
+.footer-icons h3 {
+    font-size: 18px;
+    color: #FF7F00; /* Naranja */
+    margin-bottom: 5px;
+}
+
+/* Footer */
+footer {
+    background-color: #222;
+    color: white;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: auto;
+}
+
+.footer-logo {
+    height: 50px;
+}
+
+.footer-info h3 {
+    font-size: 18px;
+    color: #FF7F00;
+    margin-bottom: 5px;
+}
+
+.footer-info p {
+    font-size: 14px;
+    color: #ccc;
+    margin: 3px 0;
+}
+
+.footer-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.footer-icons svg {
+    width: 24px;
+    height: 24px;
+    fill: #FF7F00;
+    transition: transform 0.3s ease, fill 0.3s ease;
+    cursor: pointer;
+}
+
+.footer-icons svg:hover {
+    fill: #FFA500;
+    transform: scale(1.2);
+}
+
+.footer-links a {
+    color: #ccc;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 14px;
+}
+
+.footer-links a:hover {
+    color: #FF7F00;
+}
+
+@media (max-width: 900px) {
+    footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .footer-info {
+        align-items: center;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+}
+#spinner-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    visibility: hidden; /* Oculto por defecto */
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Estilo del spinner */
+.spinner-grow text-danger {
+    width: 50px;
+    height: 50px;
+    border: 5px solid rgba(255, 255, 255, 0.3);
+    border-top: 5px solid #FF7F00; /* Color del spinner */
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+/* Animación del spinner */
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* Mostrar el spinner */
+#spinner-overlay.active {
+    visibility: visible;
+    opacity: 1;
+}

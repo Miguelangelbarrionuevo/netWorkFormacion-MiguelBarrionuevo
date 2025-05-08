@@ -851,3 +851,166 @@ footer {
     transform: translateY(0);
   }
   
+  .bloque-img {
+    width: 180px;
+    height: 120px;
+    object-fit: contain;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+    background-color: white;
+    padding: 5px;
+  }
+  .bloque-box {
+    height: 230px; /* altura fija para todos */
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  }
+  .bloque-box ul {
+    margin-left: 15px;
+  }
+  .text-orange li {
+    color: #f57c00; /* naranja o el color que uses */
+    font-weight: 500;
+  }
+  .bloque-img:hover {
+    transform: scale(1.05);
+}
+.section-title {
+  font-size: 2.5rem;
+  color: #333;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 10px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.section-title::after {
+  content: '';
+  width: 60%;
+  height: 4px;
+  background-color: #f36f21; /* Naranja corporativo */
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  border-radius: 2px;
+}
+
+/* Animación suave */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(10px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/* Estilo general para el contenedor del swiper */
+.swiper-wrapper {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 0;
+  position: relative;
+}
+
+/* Estilo de los slides */
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  border-radius: 12px;
+  overflow: hidden;
+  padding: 10px;
+}
+
+.swiper-slide img {
+  max-width: 100%;       /* Para que no se salga del contenedor */
+  max-height: 130px;     /* Ajusta este valor según lo que necesites */
+  object-fit: contain;   /* Mantiene proporciones sin recortar */
+  display: block;
+  margin: auto;
+}
+
+/* Flechas de navegación */
+.swiper-button-next,
+.swiper-button-prev {
+  color: #000;
+  background-color: transparent;
+  border-radius: 50%;
+  padding: 10px;
+  box-shadow: transparent;
+  transition: background-color 0.3s ease;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 24px;          /* Tamaño de la flecha */
+  color: orange;             /* Color de la flecha */
+  font-weight: bold;
+}
+
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  background-color: transparent;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .swiper {
+    padding: 1rem 0;
+  }
+
+  .swiper-slide img {
+    max-width: 100px;
+  }
+}
+
+.mySwiper h2 {
+  text-align: center;
+  font-size: 1.8rem;
+  color: #2d2d2d;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.mySwiper .btn {
+  display: inline-block;
+  background: #FF7F00;         /* Color principal (naranja) */
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+  margin: 10px auto 0 auto;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+}
+
+.mySwiper .btn:hover {
+  background: #e56700;          /* Un naranja más oscuro al hacer hover */
+  transform: scale(1.05);       /* Ligera ampliación al pasar el ratón */
+  color: white;
+}
+
+.btn-naranja {
+  display: inline-block;
+  background: #FF7F00;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+  margin: 10px auto 0 auto;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}

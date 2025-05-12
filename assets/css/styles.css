@@ -8,7 +8,7 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: white;
+     background: url('/assets/img/07-fondo-alquiler.jpg') no-repeat center center;
     color: black;
     text-align: center;
 }
@@ -17,6 +17,8 @@ body {
 header {
     display: flex;
     flex-direction: column;
+            background: url('../img/04-fondo.jpg');
+
     align-items: center;
     justify-content: center;
     padding: 20px 0;
@@ -25,6 +27,8 @@ header {
 .navbar {
     display: flex;
     flex-direction: column;
+                background: url('../img/04-fondo.jpg');
+
     align-items: center;
     width: 100%;
 }
@@ -581,76 +585,60 @@ footer {
     opacity: 1;
 }
 .hero {
-    position: relative;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: #ffffff;
-    background: #000;
-  }
-  .hero::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(4, 5, 0.5, 0.5);
-    opacity: 0;
-    background-image: url("/assets/img/central7.png");
-    background-size: cover;
-    background-position: center;
-    animation: fadeInBackground 3s ease-in-out forwards;
-  }
-  .hero .hero-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    max-width: 80%;
-    padding: 20px;
-    border-radius: 10px;
-  }
-  
-  @keyframes fadeInBackground {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-  .hero-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    max-width: 80%;
-    padding: 20px;
-    border-radius: 10px;
-  }
-  .hero-content h1 {
-    font-size: 3rem;
-    font-weight: bold;
-    margin-bottom: 10px;
-  }
-  .hero-content p {
-    font-size: 1.2rem;
-    margin-bottom: 20px;
-  }
-  .hero-content .btn {
-    background-color: #ffffff;
-    padding: 10px 20px;
-    text-decoration: none;
-    color: #e66900;
-    border-radius: 5px;
-    font-size: 1rem;
-  }
-  .hero-content .btn:hover {
-    background-color: #000000;
-  }
+  position: relative;
+  height: 100vh;
+  background-image: url('/assets/img/home.jpg'); /* tu imagen de fondo */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* clave para texto a la izquierda */
+  color: rgb(0, 0, 0);
+}
+
+.hero-overlay {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding-left: 8%;
+}
+
+.hero-text {
+  max-width: 600px;
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.hero-text h1 span {
+  color: #e66900;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #000000;
+  color :e66900;
+  padding: 12px 24px;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background-color: #c65500;
+}
+
   .gallery {
     text-align: center;
     padding: 60px 20px;

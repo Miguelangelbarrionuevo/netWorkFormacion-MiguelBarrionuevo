@@ -7,8 +7,7 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: white;
-    color: black;
+ background: url('/assets/img/07-fondo-alquiler.jpg') no-repeat center center;    color: black;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -24,6 +23,8 @@ main {
 /* ----- HEADER ----- */
 header {
     display: flex;
+            background: url('../img/04-fondo.jpg');
+
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -33,6 +34,8 @@ header {
 .navbar {
     display: flex;
     flex-direction: column;
+                background: url('../img/04-fondo.jpg');
+
     align-items: center;
     width: 100%;
 }

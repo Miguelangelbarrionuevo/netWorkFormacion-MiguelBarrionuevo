@@ -619,3 +619,50 @@ body {
         transform: translateY(0);
     }
 }
+.info-contacto {
+  text-align: center;
+  margin-top: 60px;
+  padding: 30px 15px;
+  background-color: #f8f9fa;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.info-contacto h3 {
+  color: #D0820D;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.info-contacto p {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.info-contacto a {
+  color: #D0820D;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.info-contacto a:hover {
+  color: #804e0d;
+}
+.seccion-cursos {
+  text-align: center;
+  color: #D0820D;
+  font-size: 28px;
+  font-weight: bold;
+  margin-top: 40px;
+  margin-bottom: 30px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #D0820D;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}

@@ -321,3 +321,13 @@ footer {
     visibility: visible;
     opacity: 1;
 }
+.formulario-container {
+  min-height: 100vh;
+  padding-top: 120px; /* espacio por el navbar fijo */
+  padding-bottom: 60px;
+}
+
+.iframe-wrapper {
+  max-width: 700px;
+  width: 100%;
+}

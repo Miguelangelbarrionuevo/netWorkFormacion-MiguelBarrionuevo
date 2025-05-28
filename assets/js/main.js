@@ -1,3 +1,14 @@
+ window.onload = function () {
+    if (!document.cookie.includes("cookies_aceptadas=true")) {
+      document.getElementById("cookie-banner").style.display = "block";
+    }
+  };
+
+  function aceptarCookies() {
+    document.cookie = "cookies_aceptadas=true; expires=Fri, 31 Dec 2026 23:59:59 UTC; path=/";
+    document.getElementById("cookie-banner").style.display = "none";
+  }
+
 document.addEventListener("DOMContentLoaded", function () {
     // === SPINNER DE CARGA ===
     const spinnerOverlay = document.getElementById("spinner-overlay");
@@ -15,6 +26,9 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
     });
+
+    
+
 
     window.addEventListener("load", () => {
         spinnerOverlay.classList.remove("active");

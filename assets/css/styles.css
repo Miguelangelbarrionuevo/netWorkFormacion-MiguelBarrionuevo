@@ -1002,3 +1002,38 @@ footer {
   text-align: center;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
+.carousel-item {
+  min-height: 320px; /* o ajusta según necesidad */
+  display: flex;
+  align-items: center;
+}
+.carousel-item img {
+  max-height: 180px; /* o 180px si las quieres más grandes */
+  max-width: 100%;
+  object-fit: contain;
+  display: block;
+  margin: auto;
+}
+.carousel-item .col-md-8 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 15px; /* alinea con respecto a imagen */
+  padding-right: 15px;
+}
+.carousel-item img {
+  max-height: 220px !important; /* agrandar imágenes */
+  object-fit: contain;
+}
+
+.carousel-item .col-md-8 {
+  text-align: center; 
+}
+
+.carousel-item h4 {
+  margin-bottom: 0.5rem;
+}
+
+.carousel-item p {
+  margin-top: 0.5rem;
+}

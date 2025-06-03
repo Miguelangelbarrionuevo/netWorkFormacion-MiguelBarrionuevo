@@ -800,7 +800,7 @@ footer {
   }
   
   .info-section.orange h2 {
-    font-size: 2rem;
+    font-size: 1.9rem;
     color: rgb(0, 0, 0);
     text-align: center;
     margin-bottom: 20px;
@@ -955,7 +955,12 @@ footer {
   overflow: hidden;
   padding: 10px;
 }
-
+.logo-ajuste {
+  padding-top: 50px;
+}
+.logo-ajuste1{
+  padding-top: 20px;
+}
 .swiper-slide img {
   max-width: 100%;       /* Para que no se salga del contenedor */
   max-height: 130px;     /* Ajusta este valor según lo que necesites */
